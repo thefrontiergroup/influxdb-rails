@@ -1,0 +1,13 @@
+test: 
+  hosts:    [localhost, otherhost]
+  port:     8056
+  username: username
+  password: password
+  database: thedatabase
+  async:    false
+  use_ssl:  true
+  debug:    false
+  instrumentation_enabled:  false
+  series_name_for_db_runtimes:         series_for_db
+  series_name_for_view_runtimes:       series_for_view
+  series_name_for_controller_runtimes: series_for_controller

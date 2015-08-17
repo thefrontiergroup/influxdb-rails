@@ -5,6 +5,15 @@ describe InfluxDB::Rails::Configuration do
     @configuration = InfluxDB::Rails::Configuration.new
   end
 
+  describe "#initialize" do
+    it "should call the configuration file loader" do
+      expect(InfluxDB::Rails::ConfigurationFileLoader).to receive(:set_configuration_values) do |object|
+        expect(object.class).to eq(InfluxDB::Rails::Configuration)
+      end
+      InfluxDB::Rails::Configuration.new
+    end
+  end
+
   describe "#ignore_user_agent?" do
     it "should be true for user agents that have been set as ignorable" do
       @configuration.ignored_user_agents = %w{Googlebot}
