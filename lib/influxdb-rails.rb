@@ -8,6 +8,7 @@ require "influxdb/rails/version"
 require "influxdb/rails/logger"
 require "influxdb/rails/exception_presenter"
 require "influxdb/rails/configuration"
+require "influxdb/rails/configuration_file_loader"
 require "influxdb/rails/backtrace"
 require "influxdb/rails/rack"
 

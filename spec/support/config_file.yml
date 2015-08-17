@@ -1,0 +1,6 @@
+test: 
+  hosts:    [localhost, otherhost]
+  port:     8056
+  username: username
+  password: password
+  database: thedatabase
