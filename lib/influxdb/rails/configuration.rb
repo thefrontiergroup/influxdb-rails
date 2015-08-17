@@ -103,6 +103,7 @@ module InfluxDB
         @debug = false
         @rescue_global_exceptions = false
         @instrumentation_enabled = true
+        ConfigurationFileLoader.set_configuration_values(self)
       end
 
       def debug?
