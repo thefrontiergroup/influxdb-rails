@@ -92,6 +92,7 @@ module InfluxDB
       end
 
       def ignorable_exception?(e)
+        return true unless configuration.instrumentation_enabled?
         configuration.ignore_current_environment? ||
         !!configuration.ignored_exception_messages.find{ |msg| /.*#{msg}.*/ =~ e.message  } ||
         configuration.ignored_exceptions.include?(e.class.to_s)
